@@ -473,17 +473,11 @@
 		*(.entry.text)						\
 		VMLINUX_SYMBOL(__entry_text_end) = .;
 
-#define IRQENTRY_TEXT							\
+#define IRQENTRY_TEXT0							\
 		ALIGN_FUNCTION();					\
 		VMLINUX_SYMBOL(__irqentry_text_start) = .;		\
 		*(.irqentry.text)					\
 		VMLINUX_SYMBOL(__irqentry_text_end) = .;
-
-#define SOFTIRQENTRY_TEXT						\
-		ALIGN_FUNCTION();					\
-		VMLINUX_SYMBOL(__softirqentry_text_start) = .;		\
-		*(.softirqentry.text)					\
-		VMLINUX_SYMBOL(__softirqentry_text_end) = .;
 
 /* Section used for early init (in .S files) */
 #define HEAD_TEXT  KEEP(*(.head.text))
