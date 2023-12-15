@@ -18,7 +18,6 @@
 #include <linux/atomic.h>
 #include <asm/ptrace.h>
 #include <asm/irq.h>
-#include <asm/sections.h>
 
 /*
  * These correspond to the IORESOURCE_IRQ_* defines in
